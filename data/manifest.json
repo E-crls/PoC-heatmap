@@ -1,0 +1,449 @@
+{
+  "cirrus": {
+    "image": "images/cirrus.png",
+    "neighbors": [
+      {
+        "rank": 1,
+        "target": "maestro",
+        "cls_sim": 0.9374,
+        "target_image": "outputs/cirrus/rank1_maestro.png"
+      },
+      {
+        "rank": 2,
+        "target": "mastercard",
+        "cls_sim": 0.8798,
+        "target_image": "outputs/cirrus/rank2_mastercard.png"
+      },
+      {
+        "rank": 3,
+        "target": "audi",
+        "cls_sim": 0.5359,
+        "target_image": "outputs/cirrus/rank3_audi.png"
+      }
+    ],
+    "params": {
+      "top_k": 5,
+      "cls_threshold": 0.25,
+      "fg_base_percentile": 85,
+      "fg_min_patches": 12,
+      "fg_max_patches": 70,
+      "fg_smooth_k": 3,
+      "cross_topk": 50,
+      "softmax_temp": 0.07,
+      "weight_by_cls": true,
+      "vis_p_low": 85,
+      "vis_p_high": 99
+    },
+    "outputs": {
+      "fg_overlay": "outputs/cirrus/fg_overlay.png",
+      "fg_heat": "outputs/cirrus/fg_heat.png",
+      "fg_selected_patches": 30,
+      "final_overlay": "outputs/cirrus/final_overlay.png",
+      "final_heatmap": "outputs/cirrus/final_heatmap.png",
+      "final_scale": {
+        "p_low": 85,
+        "p_high": 99,
+        "lo": 0.42746584117412567,
+        "hi": 0.8404978722333909
+      }
+    },
+    "debug": [
+      {
+        "target": "maestro",
+        "cls_sim": 0.9374,
+        "heat_mean_fg": 0.865788459777832,
+        "heat_max_fg": 0.9133779406547546
+      },
+      {
+        "target": "mastercard",
+        "cls_sim": 0.8798,
+        "heat_mean_fg": 0.7766428589820862,
+        "heat_max_fg": 0.8752824068069458
+      },
+      {
+        "target": "audi",
+        "cls_sim": 0.5359,
+        "heat_mean_fg": 0.6145536303520203,
+        "heat_max_fg": 0.7328643202781677
+      }
+    ]
+  },
+  "input_image": {
+    "image": "images/input_image.png",
+    "neighbors": [
+      {
+        "rank": 1,
+        "target": "lamborghini",
+        "cls_sim": 0.7046,
+        "target_image": "outputs/input_image/rank1_lamborghini.png"
+      },
+      {
+        "rank": 2,
+        "target": "redbull",
+        "cls_sim": 0.5573,
+        "target_image": "outputs/input_image/rank2_redbull.png"
+      }
+    ],
+    "params": {
+      "top_k": 5,
+      "cls_threshold": 0.25,
+      "fg_base_percentile": 85,
+      "fg_min_patches": 12,
+      "fg_max_patches": 70,
+      "fg_smooth_k": 3,
+      "cross_topk": 50,
+      "softmax_temp": 0.07,
+      "weight_by_cls": true,
+      "vis_p_low": 85,
+      "vis_p_high": 99
+    },
+    "outputs": {
+      "fg_overlay": "outputs/input_image/fg_overlay.png",
+      "fg_heat": "outputs/input_image/fg_heat.png",
+      "fg_selected_patches": 30,
+      "final_overlay": "outputs/input_image/final_overlay.png",
+      "final_heatmap": "outputs/input_image/final_heatmap.png",
+      "final_scale": {
+        "p_low": 85,
+        "p_high": 99,
+        "lo": 0.2408687174320221,
+        "hi": 0.6772791594266891
+      }
+    },
+    "debug": [
+      {
+        "target": "lamborghini",
+        "cls_sim": 0.7046,
+        "heat_mean_fg": 0.5700817704200745,
+        "heat_max_fg": 0.715947687625885
+      },
+      {
+        "target": "redbull",
+        "cls_sim": 0.5573,
+        "heat_mean_fg": 0.4991079568862915,
+        "heat_max_fg": 0.6643730998039246
+      }
+    ]
+  },
+  "lamborghini": {
+    "image": "images/lamborghini.png",
+    "neighbors": [
+      {
+        "rank": 1,
+        "target": "input_image",
+        "cls_sim": 0.7046,
+        "target_image": "outputs/lamborghini/rank1_input_image.png"
+      },
+      {
+        "rank": 2,
+        "target": "redbull",
+        "cls_sim": 0.6186,
+        "target_image": "outputs/lamborghini/rank2_redbull.png"
+      }
+    ],
+    "params": {
+      "top_k": 5,
+      "cls_threshold": 0.25,
+      "fg_base_percentile": 85,
+      "fg_min_patches": 12,
+      "fg_max_patches": 70,
+      "fg_smooth_k": 3,
+      "cross_topk": 50,
+      "softmax_temp": 0.07,
+      "weight_by_cls": true,
+      "vis_p_low": 85,
+      "vis_p_high": 99
+    },
+    "outputs": {
+      "fg_overlay": "outputs/lamborghini/fg_overlay.png",
+      "fg_heat": "outputs/lamborghini/fg_heat.png",
+      "fg_selected_patches": 30,
+      "final_overlay": "outputs/lamborghini/final_overlay.png",
+      "final_heatmap": "outputs/lamborghini/final_heatmap.png",
+      "final_scale": {
+        "p_low": 85,
+        "p_high": 99,
+        "lo": 0.2851637899875641,
+        "hi": 0.72416550219059
+      }
+    },
+    "debug": [
+      {
+        "target": "input_image",
+        "cls_sim": 0.7046,
+        "heat_mean_fg": 0.6035271286964417,
+        "heat_max_fg": 0.687298595905304
+      },
+      {
+        "target": "redbull",
+        "cls_sim": 0.6186,
+        "heat_mean_fg": 0.6762064695358276,
+        "heat_max_fg": 0.8302584290504456
+      }
+    ]
+  },
+  "maestro": {
+    "image": "images/maestro.png",
+    "neighbors": [
+      {
+        "rank": 1,
+        "target": "cirrus",
+        "cls_sim": 0.9374,
+        "target_image": "outputs/maestro/rank1_cirrus.png"
+      },
+      {
+        "rank": 2,
+        "target": "mastercard",
+        "cls_sim": 0.8511,
+        "target_image": "outputs/maestro/rank2_mastercard.png"
+      },
+      {
+        "rank": 3,
+        "target": "audi",
+        "cls_sim": 0.4989,
+        "target_image": "outputs/maestro/rank3_audi.png"
+      }
+    ],
+    "params": {
+      "top_k": 5,
+      "cls_threshold": 0.25,
+      "fg_base_percentile": 85,
+      "fg_min_patches": 12,
+      "fg_max_patches": 70,
+      "fg_smooth_k": 3,
+      "cross_topk": 50,
+      "softmax_temp": 0.07,
+      "weight_by_cls": true,
+      "vis_p_low": 85,
+      "vis_p_high": 99
+    },
+    "outputs": {
+      "fg_overlay": "outputs/maestro/fg_overlay.png",
+      "fg_heat": "outputs/maestro/fg_heat.png",
+      "fg_selected_patches": 30,
+      "final_overlay": "outputs/maestro/final_overlay.png",
+      "final_heatmap": "outputs/maestro/final_heatmap.png",
+      "final_scale": {
+        "p_low": 85,
+        "p_high": 99,
+        "lo": 0.4451870173215866,
+        "hi": 0.8595865339040757
+      }
+    },
+    "debug": [
+      {
+        "target": "cirrus",
+        "cls_sim": 0.9374,
+        "heat_mean_fg": 0.8690546751022339,
+        "heat_max_fg": 0.92302006483078
+      },
+      {
+        "target": "mastercard",
+        "cls_sim": 0.8511,
+        "heat_mean_fg": 0.7915418744087219,
+        "heat_max_fg": 0.8823888897895813
+      },
+      {
+        "target": "audi",
+        "cls_sim": 0.4989,
+        "heat_mean_fg": 0.6254103183746338,
+        "heat_max_fg": 0.7918459177017212
+      }
+    ]
+  },
+  "mastercard": {
+    "image": "images/mastercard.png",
+    "neighbors": [
+      {
+        "rank": 1,
+        "target": "cirrus",
+        "cls_sim": 0.8798,
+        "target_image": "outputs/mastercard/rank1_cirrus.png"
+      },
+      {
+        "rank": 2,
+        "target": "maestro",
+        "cls_sim": 0.8511,
+        "target_image": "outputs/mastercard/rank2_maestro.png"
+      },
+      {
+        "rank": 3,
+        "target": "audi",
+        "cls_sim": 0.5529,
+        "target_image": "outputs/mastercard/rank3_audi.png"
+      },
+      {
+        "rank": 4,
+        "target": "olimpiadas",
+        "cls_sim": 0.2515,
+        "target_image": "outputs/mastercard/rank4_olimpiadas.png"
+      }
+    ],
+    "params": {
+      "top_k": 5,
+      "cls_threshold": 0.25,
+      "fg_base_percentile": 85,
+      "fg_min_patches": 12,
+      "fg_max_patches": 70,
+      "fg_smooth_k": 3,
+      "cross_topk": 50,
+      "softmax_temp": 0.07,
+      "weight_by_cls": true,
+      "vis_p_low": 85,
+      "vis_p_high": 99
+    },
+    "outputs": {
+      "fg_overlay": "outputs/mastercard/fg_overlay.png",
+      "fg_heat": "outputs/mastercard/fg_heat.png",
+      "fg_selected_patches": 30,
+      "final_overlay": "outputs/mastercard/final_overlay.png",
+      "final_heatmap": "outputs/mastercard/final_heatmap.png",
+      "final_scale": {
+        "p_low": 85,
+        "p_high": 99,
+        "lo": 0.5362480133771896,
+        "hi": 0.8216297656297684
+      }
+    },
+    "debug": [
+      {
+        "target": "cirrus",
+        "cls_sim": 0.8798,
+        "heat_mean_fg": 0.8468858003616333,
+        "heat_max_fg": 0.8973539471626282
+      },
+      {
+        "target": "maestro",
+        "cls_sim": 0.8511,
+        "heat_mean_fg": 0.8492204546928406,
+        "heat_max_fg": 0.9005368947982788
+      },
+      {
+        "target": "audi",
+        "cls_sim": 0.5529,
+        "heat_mean_fg": 0.7042025923728943,
+        "heat_max_fg": 0.8036308884620667
+      },
+      {
+        "target": "olimpiadas",
+        "cls_sim": 0.2515,
+        "heat_mean_fg": 0.43631860613822937,
+        "heat_max_fg": 0.5056936740875244
+      }
+    ]
+  },
+  "olimpiadas": {
+    "image": "images/olimpiadas.png",
+    "neighbors": [
+      {
+        "rank": 1,
+        "target": "audi",
+        "cls_sim": 0.3448,
+        "target_image": "outputs/olimpiadas/rank1_audi.png"
+      },
+      {
+        "rank": 2,
+        "target": "mastercard",
+        "cls_sim": 0.2515,
+        "target_image": "outputs/olimpiadas/rank2_mastercard.png"
+      }
+    ],
+    "params": {
+      "top_k": 5,
+      "cls_threshold": 0.25,
+      "fg_base_percentile": 85,
+      "fg_min_patches": 12,
+      "fg_max_patches": 70,
+      "fg_smooth_k": 3,
+      "cross_topk": 50,
+      "softmax_temp": 0.07,
+      "weight_by_cls": true,
+      "vis_p_low": 85,
+      "vis_p_high": 99
+    },
+    "outputs": {
+      "fg_overlay": "outputs/olimpiadas/fg_overlay.png",
+      "fg_heat": "outputs/olimpiadas/fg_heat.png",
+      "fg_selected_patches": 30,
+      "final_overlay": "outputs/olimpiadas/final_overlay.png",
+      "final_heatmap": "outputs/olimpiadas/final_heatmap.png",
+      "final_scale": {
+        "p_low": 85,
+        "p_high": 99,
+        "lo": 0.22533895075321198,
+        "hi": 0.4383642762899399
+      }
+    },
+    "debug": [
+      {
+        "target": "audi",
+        "cls_sim": 0.3448,
+        "heat_mean_fg": 0.4041208326816559,
+        "heat_max_fg": 0.5176123380661011
+      },
+      {
+        "target": "mastercard",
+        "cls_sim": 0.2515,
+        "heat_mean_fg": 0.33642178773880005,
+        "heat_max_fg": 0.4562312066555023
+      }
+    ]
+  },
+  "saucony": {
+    "image": "images/saucony.png",
+    "neighbors": [
+      {
+        "rank": 1,
+        "target": "brooks",
+        "cls_sim": 0.4179,
+        "target_image": "outputs/saucony/rank1_brooks.png"
+      },
+      {
+        "rank": 2,
+        "target": "speedo",
+        "cls_sim": 0.2509,
+        "target_image": "outputs/saucony/rank2_speedo.png"
+      }
+    ],
+    "params": {
+      "top_k": 5,
+      "cls_threshold": 0.25,
+      "fg_base_percentile": 85,
+      "fg_min_patches": 12,
+      "fg_max_patches": 70,
+      "fg_smooth_k": 3,
+      "cross_topk": 50,
+      "softmax_temp": 0.07,
+      "weight_by_cls": true,
+      "vis_p_low": 85,
+      "vis_p_high": 99
+    },
+    "outputs": {
+      "fg_overlay": "outputs/saucony/fg_overlay.png",
+      "fg_heat": "outputs/saucony/fg_heat.png",
+      "fg_selected_patches": 30,
+      "final_overlay": "outputs/saucony/final_overlay.png",
+      "final_heatmap": "outputs/saucony/final_heatmap.png",
+      "final_scale": {
+        "p_low": 85,
+        "p_high": 99,
+        "lo": 0.20060478150844574,
+        "hi": 0.6287876904010774
+      }
+    },
+    "debug": [
+      {
+        "target": "brooks",
+        "cls_sim": 0.4179,
+        "heat_mean_fg": 0.4620714485645294,
+        "heat_max_fg": 0.6726630926132202
+      },
+      {
+        "target": "speedo",
+        "cls_sim": 0.2509,
+        "heat_mean_fg": 0.414442241191864,
+        "heat_max_fg": 0.6259583830833435
+      }
+    ]
+  }
+}
